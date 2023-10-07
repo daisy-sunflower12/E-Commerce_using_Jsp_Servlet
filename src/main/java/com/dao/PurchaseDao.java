@@ -194,6 +194,7 @@ public class PurchaseDao {
 			PreparedStatement pst = con.prepareStatement("update user set balance = ? where u_id = ?");
 			pst.setDouble(1, user.getBalance());
 			System.out.println("Qty: "+user.getBalance());
+			System.out.println("Hello Github");
 			pst.setInt(2, user.getId());
 			System.out.println("Id: "+user.getId());
 			pst.executeUpdate();
