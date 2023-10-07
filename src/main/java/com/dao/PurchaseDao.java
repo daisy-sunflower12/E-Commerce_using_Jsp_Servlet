@@ -197,6 +197,7 @@ public class PurchaseDao {
 			pst.setInt(2, user.getId());
 			System.out.println("Id: "+user.getId());
 			pst.executeUpdate();
+			pst.close();
 			con.close();
 			System.out.println("User "+user);
 		} catch (Exception e) {
