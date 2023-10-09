@@ -1,3 +1,4 @@
+<%@page import="com.model.User"%>
 <%@page import="com.dao.ProductDao"%>
 <%@page import="com.model.Product"%>
 <%@page import="java.util.List"%>
@@ -13,12 +14,13 @@
 </head>
 <body>
 	<%
-	/* String user = (String)session.getAttribute("user"); */
+	 User user = (User)session.getAttribute("user"); 
 
 	List<Product> products = ProductDao.getAllProducts();
 	request.setAttribute("list", products);
 	%>
 
+Buyer Balance: ${user.balance}
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-md-7 offset-md-2">
