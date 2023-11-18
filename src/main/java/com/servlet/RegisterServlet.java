@@ -32,6 +32,7 @@ public class RegisterServlet extends HttpServlet{
 		User u = new User();
 		
 		u.setFirstName(req.getParameter("firstName"));
+		System.out.println("First Name: "+u.getFirstName());
 		u.setLastName(req.getParameter("lastName"));
 		u.setEmail(req.getParameter("email"));
 		u.setPassword(req.getParameter("password"));
